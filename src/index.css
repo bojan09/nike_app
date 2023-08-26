@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --tw-text-opacity: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,47 +16,63 @@
   scroll-behavior: smooth;
 }
 
-@layer components {
-  .max-container {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-
-  .input {
-    @apply sm: flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
-  }
+.max-container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-@layer utilities {
-  .padding {
-    @apply sm: px-16 px-8 sm:py-24 py-12;
-  }
+.input {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  font-size: 16px;
+  line-height: 19.5px;
+  color: rgb(109 109 109 / var(--tw-text-opacity));
+  padding-left: 1.25rem;
+  padding: 1.25rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-style: none;
+  border-width: 1px;
+  border-color: rgb(109 109 109 / var(--tw-border-opacity));
+  border-radius: 9999px;
+}
 
-  .padding-x {
-    @apply sm: px-16 px-8;
-  }
 
-  .padding-y {
-    @apply sm: py-24 py-12;
-  }
+.padding {
+  padding: 8rem 4rem;
+}
 
-  .padding-l {
-    @apply sm: pl-16 pl-8;
-  }
 
-  .padding-r {
-    @apply sm: pr-16 pr-8;
-  }
+.padding-x {
+  padding-inline: 4rem;
+}
 
-  .padding-t {
-    @apply sm: pt-24 pt-12;
-  }
+.padding-y {
+  padding: 3rem 0;
+}
 
-  .padding-b {
-    @apply sm: pb-24 pb-12;
-  }
+.padding-l {
+  padding-left: 4rem;
+}
 
-  .info-text {
-    @apply font-montserrat text-slate-gray text-lg leading-7;
-  }
+.padding-r {
+  padding-right: 2rem;
+}
+
+.padding-t {
+  padding-top: 3rem;
+}
+
+.padding-b {
+  padding-bottom: 3rem
+}
+
+
+.info-text {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(109 109 109 / var(--tw-text-opacity));
+  font-size: 18px;
+  line-height: 21.94px;
+  line-height: 1.75rem;
 }
